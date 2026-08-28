@@ -1,0 +1,1 @@
+.ovs-overlay,.ovs-search{display:grid;place-items:center center}.ovs-overlay{position:absolute;top:0;z-index:1000000;height:100vh;width:100vw;margin:0;background:rgba(0,0,0,.4)}.ovs-search{background:#FFF;border-radius:5px;padding:1em;height:100px;width:50%;min-width:300px;overflow:hidden}.ovs-search-box{border:none;box-shadow:none;width:90%;height:80%;font-size:1.5em}

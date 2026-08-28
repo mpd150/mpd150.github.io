@@ -1,0 +1,513 @@
+/*
+ Theme Name: MPD150
+ Author: Martin Sheeks
+ Author URI: https://martinsheeks.com
+ Description: The MPD150 Wordpress Theme
+ Version: 3.0
+ License: GNU General Public License v2
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain: twentyeighteen
+ */
+
+body {
+    background: #efefef;
+    color: #222;
+    font-family: 'Slabo 27px', serif;
+}
+
+h1, h2, h3, h4, h5, nav a {
+    font-family: 'Sarala', sans-serif;
+}
+
+a {
+    color:#222;
+}
+
+button,
+input[type="submit"], .btn-primary {
+    background-color: #3c3087;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover,
+input[type='submit']:hover {
+    background-color: #513fc1;
+}
+
+.page-content a {
+    text-decoration:underline;
+}
+
+.page-content .button, .page-content .btn-primary, .page-content input[type="submit"]{
+	text-decoration:none;
+}
+
+.page-content a:hover {
+    text-decoration:none;
+    color:#3C3385;
+}
+
+.page-content .button:hover, .page-content .btn-primary:hover, .page-content input[type="submit"]:hover {
+	color:white;
+}
+
+.modal-header .close {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+}
+
+.home-mod {
+    /*height:350px;*/
+    min-height:350px; 
+    overflow:hidden;
+}
+
+#home-cover {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:bottom;
+    min-height:350px;
+    color:#efefef;
+    background-image:url('/wp-content/themes/mpd150/assets/img/home-cover-orange.jpg');
+}
+
+#social-nav {
+    font-size:1.7em;
+}
+
+#social-nav .nav-link {
+    margin:0;
+}
+
+#home-report, #featured-post {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:bottom;
+    color:#efefef;
+    cursor:pointer;
+}
+
+#featured-post {
+	/*background-image:url('https://www.mpd150.com/wp-content/uploads/2021/09/IMG-8540.jpg');*/
+    background-image:url('/wp-content/themes/mpd150/assets/img/home-cover-lupine.png');
+    padding:0;
+}
+
+#featured-post .overlay{
+	padding: 4rem 3rem;
+    min-height: 350px;
+    background-color: rgba(0,0,0,.5);
+
+   }
+
+a.hover .lead {
+	text-decoration: none;
+}
+
+#home-report {
+	background-image:url('/wp-content/themes/mpd150/assets/img/peoples-plaza.jpg');
+ }
+
+a:hover>#home-report {
+    text-decoration:none;
+}
+
+#newsCarousel .carousel-item {  
+    min-height:350px;
+    border-radius:5px;
+}
+#newsCarousel .carousel-item a {
+    color: #222;
+}
+
+#newsCarousel .with-image {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.6);
+    color:#efefef;
+}
+#newsCarousel .with-image a {
+    color:#efefef;
+}
+#logo {
+    height:50px;
+}
+.aligncenter {
+    margin:1em auto;
+    display:block;
+}
+.wp-caption.aligncenter {
+    text-align:center;
+    margin:1em auto;
+}
+.wp-caption-text {
+    font-size:0.8em;
+}
+
+.alignleft {
+    float:left;
+    margin:1em 1em 1em 0;
+}
+.alignright {
+    float:right;
+    margin:1em 0 1em 1em;
+}
+
+.page-content, .post-content {
+    font-size:1.3em;
+}
+
+.accordion-heading {
+    cursor:pointer;
+}
+.accordion-heading:hover {
+    background:#3C3385;
+    color:#FFF;
+}
+
+#exhibit-cover {
+    max-height:350px;
+    margin:0 auto;
+}
+
+#exhibit-block,
+#exhibit-block-inner {
+    color: white;
+}
+
+img, .wp-caption {
+    max-width:100% !important;
+}
+
+blockquote {
+    border-left: 3px solid #3C3385;
+    padding:0.5em 0 0.3em 2em;
+    margin:1em 0 1em 0;
+}
+
+.pull-quote {
+    display:block!important;
+    font-size:2rem!important;
+    font-weight:bold!important;
+    text-align:center!important;
+    margin:2rem auto!important;
+    width:90%!important;
+    line-height:1.3!important;
+}
+
+/* Sidebar */
+
+#sidebar:not(.report) .report-navigation{
+    display: none;
+}
+
+#sidebar .menu-item a {
+    font-family: 'Sarala', sans-serif;
+    padding: 0 1rem;
+    margin: .3rem 0;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#menu-report-navigation {
+    padding-left: 0;
+}
+
+#menu-report-navigation .sub-menu,
+#sidebar .recent-news ul {
+    padding-left: 20px;
+}
+
+#menu-report-navigation .menu-item a:hover, #sidebar .current-menu-item > a{
+    color:#3C3385;
+}
+
+#menu-report-navigation > .menu-item > a {
+    border-left: .3rem solid transparent;  /* stops border from shifting content */
+}
+
+#sidebar .current-menu-parent > a,
+#menu-report-navigation > .current-menu-item > a{
+    border-left: .3rem solid #3C3385; /* show borders on parent items only */
+}
+
+#sidebar .recent-news li {
+    margin-bottom: 10px;
+}
+
+#sidebar .recent-news a {
+    font-family: 'Slabo 27px', serif;
+}
+
+#sidebar .recent-news li {
+    padding-left:.9rem;
+    border-left: .1rem solid transparent;
+}
+
+#sidebar .recent-news  li:hover {
+    border-left: .1rem solid #3C3385;
+}
+
+#sidebar .recent-news li a:hover {
+    color:#3C3385;
+    text-decoration: none;
+}
+
+/* Timeline */
+
+.tg-content {
+    padding: 20px;
+}
+
+.tg-track,
+.tg-label {
+    background-color: black !important;
+}
+
+/* Alternatives */
+
+.acf-field--post-title, .acf-field-taxonomy {
+    display:none;
+}
+
+.text-center {
+    text-align:center;
+}
+
+
+a:hover, a:active {
+    color:inherit;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #3C3087;
+}
+#futures .row {
+    justify-content: space-between;
+}
+
+#futures .topic {
+    background-color: white;
+    padding: 20px;
+    width:33%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.modal-dialog {
+    background-color: white;
+}
+
+.modal-full {
+    width:80%;
+    max-width:700px;
+}
+
+
+#coffee-abolitionist img {
+	height: 350px;
+    border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.nohover:hover {
+    text-decoration:inherit;
+    color:inherit;
+    cursor:pointer;
+}
+
+/* Mailchimp Styles */
+
+
+
+#general-signup-1.submit-button-inline-label {
+    display:block;
+    margin:0 auto;
+    float:none;
+}
+
+  #general-signup-1.yikes-easy-mc-submit-button {
+    background-color:#3C3085;
+    color:black;
+    font-weight:bold;
+   
+}
+ #general-signup-1.yikes-easy-mc-submit-button:hover {
+        background-color:#2510a2;
+ }
+
+#yikes-mailchimp-container-2 label.label-inline {
+    width:33%;
+}
+
+#yikes-mailchimp-container-2 .yikes-easy-mc-form .fbb8087422-label {
+    width:100%;
+    margin-bottom:0;
+}
+#yikes-mailchimp-container-2.yikes-easy-mc-checkbox-label {
+    width:33%;
+}
+
+.fbb8087422-label.checkbox-parent-label {
+    margin-bottom:15px!important;
+}
+
+#yikes-mailchimp-container-2 .fbb8087422-label .yikes-easy-mc-checkbox-label {
+    width:45%;
+    margin-bottom:0;
+}
+
+#yikes-mailchimp-container-2 {
+    padding:20px;
+}
+
+#yikes-mailchimp-container label {
+    width:33%;
+}
+
+#yikes-mailchimp-container-2, #yikes-mailchimp-container-2 label, #yikes-mailchimp-container-2 input {
+    color:black;
+}
+
+#yikes-mailchimp-container-2 .yikes-easy-mc-form label {
+    margin-bottom:1.5em;
+}
+
+#yikes-mailchimp-container-2 label.label-inline > span {
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:5px;
+    display:block;
+}
+
+#yikes-mailchimp-container-2 .submit-button-inline-label {
+    width:145px;
+    text-align:center;
+
+}
+
+
+
+/*hiding some mailchimp fields manually*/
+
+[for=fbb8087422-0],[for=fbb8087422-1], [for=fbb8087422-4], [for=fbb8087422-9] {
+    display:none;
+}
+
+/* media queries */
+
+@media(max-width:992px) {
+	#futures .topic {
+	   width: 49%;
+	}
+
+	#exhibit-block-inner {
+    	 background:rgba(255,255,255,0.6);
+   		 border:3px solid white;
+	}
+
+	#exhibit-block-inner h3 {
+    		color:#3B3385;
+	}
+	.working-group-descriptions > div > div{
+   		min-height:0!important;
+	}
+
+	#yikes-mailchimp-container-2 .yikes-easy-mc-form .fbb8087422-label .yikes-easy-mc-checkbox-label,
+	.yikes-easy-mc-form label.label-inline {
+    		width:100%!important;
+	}
+
+
+	#exhibit-block-inner h4 {
+    		font-size: 1.2em;
+	}
+
+	.nohover:hover {
+    		text-decoration:inherit;
+    		color:inherit;
+    		cursor:pointer;
+	}
+	.home-mod,
+	#home-cover,
+	#newsCarousel .carousel-item {
+    		height: 400px;
+	}
+	
+	body #gallery-2 .gallery-item {
+		width:100%;
+	}
+}
+
+
+
+/* Woocommerce */
+
+.woocommerce-product-gallery__image img {
+	height:auto!important;
+	max-height:200px!important;
+}
+
+body .woocommerce div.product form.cart div.quantity {
+	float: none;
+	margin: 20px 0;
+}
+
+body .woocommerce div.product form.cart div.quantity:before {
+	content:"Quantity: "
+}
+
+.product_meta, .coupon, .woocommerce-form-coupon-toggle {
+	display:none;
+}
+
+.woocommerce .woocommerce-checkout .col2-set  .col-2 {
+	float:none;
+	max-width:100%;
+	margin-top:40px;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li:first-child {
+	width:50%;
+} 
+
+.woocommerce-product-gallery .flex-viewport {
+	margin-bottom:5px;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.woocommerce div.product div.images img {
+	width: auto!important;
+	margin: 0 auto;
+}
+
+#product-14670 .wcppec-checkout-buttons, .woo_pp_cart_buttons_div {
+	display:none;
+}
+
+/* Comic */
+.comic-container {
+	margin-bottom:50px;
+}
+
+/* new report */
+
+#product-14827 .woocommerce-product-gallery__image img {
+	max-height:none!important;
+}
+
+
