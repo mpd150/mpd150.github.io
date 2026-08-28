@@ -1,0 +1,302 @@
+/**
+ * Timeline Gorilla - jQueru Timeline Plugin
+ * @version 1.0
+ */
+
+.timeline-gorilla { position: relative; }
+
+.timeline-gorilla:after,
+.timeline-gorilla:before {
+    display:table;
+    content:"";
+    line-height:0
+}
+.timeline-gorilla:after { clear:both }
+
+
+/**
+ * Track
+ */
+.tg-track{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 5;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+
+    background-color: #E9EBEE;
+}
+
+
+/**
+ * Item
+ */
+.tg-item { 
+    position: relative; 
+    z-index: 10;
+}
+
+.tg-milestone { text-align: center; }
+
+.tg-milestone+.tg-item,
+.tg-item+.tg-milestone,
+.tg-left+.tg-left,
+.tg-right+.tg-right,
+.tg-item+.tg-item{ margin-top: 50px; }
+
+.tg-small { width: 50%; }
+.tg-right { margin-left: 50%; }
+
+.tg-big {
+    margin-top: 160px;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+}
+
+
+/**
+ * Label
+ */
+.tg-milestone .tg-label { display: none !important; }
+
+.tg-small .tg-label, 
+.tg-big .tg-label {
+    position: absolute;
+    z-index: 10;
+    
+    width: 100px;
+    height: 100px;
+
+    text-align: center;
+    color: #fff;
+}
+.tg-small .tg-label { top: 0px; }
+.tg-big .tg-label{
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px;
+    margin-bottom: 130px;
+}
+
+.tg-left .tg-label {
+    left: 100%;
+    margin-left: -50px;
+}
+
+.tg-right .tg-label {
+    right: 100%;
+    margin-right: -50px;
+}
+
+.tg-item .tg-label .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    font-size: 90px;
+    line-height: 100px;
+    color: #ff0000;
+}
+
+.tg-item .tg-label .date {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    margin-top: -20px;
+
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.tg-item .tg-label .date .big {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/**
+ * Content
+ */
+.tg-content { position: relative; }
+.tg-left .tg-content{ margin-right: 15%; }
+
+.tg-right .tg-content{ margin-left: 15%; }
+
+
+
+
+
+
+/* MOBILE CSS */
+.tg-mobile{}
+
+.tg-mobile .tg-track{ left: 30px; }
+
+
+.tg-mobile .tg-item+.tg-item { margin-top: 30px; }
+.tg-mobile .tg-milestone{ text-align: left; }
+.tg-mobile .tg-small{width: 100%;}
+.tg-mobile .tg-right { margin-left: 0; }
+.tg-mobile .tg-left+.tg-right,
+.tg-mobile .tg-right+.tg-left {margin-top: 30px; }
+
+
+
+.tg-mobile .tg-milestone .tg-label{}
+
+.tg-mobile .tg-small .tg-label, 
+.tg-mobile .tg-big .tg-label {
+    width: 60px;
+    height: 60px;
+}
+
+.tg-mobile .tg-small .tg-label { 
+    left: 0;
+    margin-right: 0; 
+    margin-left: 0; 
+}
+.tg-mobile .tg-big .tg-label { 
+    top: 0;
+    bottom: auto;
+    left: 0;
+    margin-bottom: 0;
+}
+
+.tg-mobile .tg-item .tg-label .fa {
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.tg-mobile .tg-item .tg-label .date {
+    margin-top: -16px;
+    line-height: 16px;
+}
+
+.tg-mobile .tg-content { }
+.tg-mobile .tg-small .tg-content {
+    margin-right: 0;
+    margin-left: 80px;
+}
+.tg-mobile .tg-big .tg-content{margin-left: 80px;}
+
+
+
+
+
+
+/**
+ * Timeline Item Content
+ * Feel free to edit
+ */
+body{font-size: 100%; padding: 0; margin:0; font-family: 'Open Sans', sans-serif; 
+    background-color: #ffffff;; color: #000000;}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+.container{margin: 50px auto; padding: 0 20px; max-width: 940px;}
+
+
+
+.header{
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+.header h1 {
+    margin: 0;
+    color: #3D4144;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 59px;
+}
+
+.header h1 .name{
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+.header h1 .name:first-child {text-align: right;}
+.header h1 .fa {color: #ff0000;}
+
+
+.timeline {}
+
+.timeline-content{}
+
+.cover{
+    display: block;
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 30px;
+}
+
+
+h2 {
+    margin: 0;
+    color: #3D4144;
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+p {
+    color: #9B9B9B;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    z-index: 3;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+}
+
+img.full-width {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.load-more {
+    position: relative;
+    z-index: 10;
+    
+    text-align: center;
+    display: block;
+    width: 140px;
+    font-size: 20px;
+    line-height: 1;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #02376B;
+    color: #fff;
+    margin: -15px auto 0;
+    text-decoration: none;
+}
+
+.load-more.on-progress {
+    background-color: #e8e8e8;
+    color: #000000;
+    cursor: default;
+}

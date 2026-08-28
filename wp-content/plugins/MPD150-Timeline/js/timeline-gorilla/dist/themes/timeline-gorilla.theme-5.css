@@ -1,0 +1,346 @@
+/**
+ * Timeline Gorilla - jQueru Timeline Plugin
+ * @version 1.0
+ */
+
+.timeline-gorilla { position: relative; }
+
+.timeline-gorilla:after,
+.timeline-gorilla:before {
+    display:table;
+    content:"";
+    line-height:0
+}
+.timeline-gorilla:after { clear:both }
+
+
+/**
+ * Track
+ */
+.tg-track{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 5;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+
+    background-color: #353F34;
+}
+
+
+/**
+ * Item
+ */
+.tg-item { 
+    position: relative; 
+    z-index: 10;
+}
+
+.tg-milestone { 
+    background-color: #fff;
+    text-align: center; 
+}
+
+.tg-milestone+.tg-item,
+.tg-item+.tg-milestone,
+.tg-left+.tg-left,
+.tg-right+.tg-right{margin-top: 20px;}
+
+.tg-small { width: 50%; }
+.tg-right { margin-left: 50%; }
+
+.tg-big {
+    z-index: 10;
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+}
+
+
+/**
+ * Label
+ */
+.tg-milestone .tg-label {}
+.tg-milestone .tg-label .img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.tg-milestone .tg-label .title {
+    display: inline-block;
+    padding: 13px 30px;
+
+    border-radius: 30px;
+    background-color: #4BD063;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}
+.tg-milestone .tg-label .img+.title { margin-top: 10px; }
+
+
+.tg-small .tg-label, 
+.tg-big .tg-label {
+    position: absolute;
+    z-index: 10;
+    
+    width: 64px;
+    padding: 5px;
+    
+    border: 3px solid #4BD063;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #353F34;
+    text-align: center;
+}
+.tg-small .tg-label { top: 32px; }
+.tg-big .tg-label{
+    bottom: 100%;
+    left: 50%;
+    margin-left: -40px;
+    margin-bottom: 30px;
+}
+
+.tg-left .tg-label {
+    left: 100%;
+    margin-left: -40px;
+}
+
+.tg-right .tg-label {
+    right: 100%;
+    margin-right: -40px;
+}
+
+
+/**
+ * Content
+ */
+.tg-content {
+    position: relative;
+    
+    border: 2px solid #E9EBEE;
+    box-shadow: 0 3px 9px 0 #E9EBEE;
+    background-color: #f0f0f0; 
+    border-radius: 7px;
+}
+
+.tg-left .tg-content{ margin-right: 60px; }
+.tg-left .tg-content:before,
+.tg-left .tg-content:after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 35px;
+    left: 100%;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+}
+.tg-left .tg-content:before { border-left: 14px solid #E9EBEE; }
+.tg-left .tg-content:after {
+    margin-left: -2px;
+    border-left: 14px solid #f0f0f0;
+}
+
+
+.tg-right .tg-content{ margin-left: 60px; }
+.tg-right .tg-content:before,
+.tg-right .tg-content:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 35px;
+    z-index: 1;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+}
+.tg-right .tg-content:before { border-right: 14px solid #E9EBEE; }
+.tg-right .tg-content:after {   
+    margin-right: -2px;
+    border-right: 14px solid #f0f0f0;
+}
+
+
+.tg-big .tg-content:before,
+.tg-big .tg-content:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    z-index: 1;
+    margin-left: -14px;
+    border-right: 14px solid transparent;
+    border-left: 14px solid transparent;
+}
+
+.tg-big .tg-content:before { border-bottom: 14px solid #E9EBEE; }
+.tg-big .tg-content:after {
+    margin-bottom: -2px;
+    border-bottom: 14px solid #fofofo;
+}
+
+
+
+
+
+/* MOBILE CSS */
+.tg-mobile{}
+
+.tg-mobile .tg-track{ left: 20px; }
+
+
+.tg-mobile .tg-item+.tg-item { margin-top: 30px; }
+.tg-mobile .tg-milestone{ text-align: left; }
+.tg-mobile .tg-small{width: 100%;}
+.tg-mobile .tg-right { margin-left: 0; }
+.tg-mobile .tg-left+.tg-right,
+.tg-mobile .tg-right+.tg-left {margin-top: 30px; }
+
+
+
+.tg-mobile .tg-milestone .tg-label{}
+.tg-mobile .tg-milestone .tg-label .img {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+.tg-mobile .tg-milestone .tg-label .title{
+    font-size: 12px;
+    padding: 3px 10px;
+}
+
+
+.tg-mobile .tg-small .tg-label, 
+.tg-mobile .tg-big .tg-label {
+    width: 40px;
+    padding: 0 5px;
+}
+
+.tg-mobile .tg-small .tg-label { 
+    left: 0;
+    top: 21px; 
+    margin-right: 0; 
+    margin-left: 0; 
+}
+.tg-mobile .tg-big .tg-label { 
+    top: 21px;
+    bottom: auto;
+    left: 0;
+    margin-bottom: 0;
+}
+
+
+.tg-mobile .tg-content { border-radius: 4px; }
+
+.tg-mobile .tg-small .tg-content {
+    margin-right: 0;
+    margin-left: 80px;
+}
+.tg-mobile .tg-small .tg-content:before,
+.tg-mobile .tg-small .tg-content:after {
+    left: auto; 
+    top: 17px;
+    right: 100%;
+    border-left: none;
+    border-right: 14px solid #E9EBEE;
+}
+.tg-mobile .tg-small .tg-content:after { 
+    margin-left: 0;
+    margin-right: -2px;
+    border-right-color: #f0f0f0;
+}
+
+.tg-mobile .tg-big .tg-content{margin-left: 80px;}
+.tg-mobile .tg-big .tg-content:before,
+.tg-mobile .tg-big .tg-content:after {
+    border-left: none;
+    border-top: 14px solid transparent;
+    border-bottom-color: transparent;
+    border-right-color: #E9EBEE;
+    left: auto; 
+    bottom: auto;
+    top: 17px;
+    right: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+.tg-mobile .tg-big .tg-content:after {
+    border-right-color: #f0f0f0;  
+    margin-right: -2px; 
+}
+
+
+
+
+
+
+/**
+ * Timeline Item Content
+ * Feel free to edit
+ */
+
+
+.timeline {}
+
+.timeline-content{padding: 37px; margin: -2px; border-radius: 8px; overflow: hidden;}
+.tg-mobile .timeline-content{padding: 15px;}
+.timeline-content.no-padding{padding: 0;}
+
+
+
+.iframe-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    z-index: 3;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+}
+
+img.full-width {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.load-more {
+    position: relative;
+    z-index: 10;
+    
+    text-align: center;
+    display: block;
+    width: 140px;
+    font-size: 20px;
+    line-height: 1;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #4BD063;
+    color: #fff;
+    margin: -15px auto 0;
+    text-decoration: none;
+}
+
+.load-more.on-progress {
+    background-color: #e8e8e8;
+    color: #000000;
+    cursor: default;
+}
