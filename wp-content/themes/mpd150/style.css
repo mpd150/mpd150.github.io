@@ -93,7 +93,7 @@ input[type='submit']:hover {
 }
 
 #featured-post {
-	/*background-image:url('https://www.mpd150.com/wp-content/uploads/2021/09/IMG-8540.jpg');*/
+	/*background-image:url('/wp-content/uploads/2021/09/IMG-8540.jpg');*/
     background-image:url('/wp-content/themes/mpd150/assets/img/home-cover-lupine.png');
     padding:0;
 }
